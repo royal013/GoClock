@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/manufacturer_page.css">
+
+
+
+</head>
+
+<body>
+    <section id="contact">
+        <div class="content">
+            <div id="form">
+                <form action="/manufacturer_page" id="contactForm" method="post">
+                    <span>Order_ID</span>
+                    <input type="text" id="order_id" name="order_id" class="name" onClick="autopopulate()" placeholder="Enter details" tabindex=1 />
+                    
+                    <span>To</span>
+                    <input type="text" name="to" class="name" placeholder="Enter details" tabindex=1 />
+
+                    <span>From</span>
+                    <input type="text" name="from" class="name" placeholder="Enter details" tabindex=1 />
+
+                    <span>Address</span>
+                    <input type="text" name="address" class="name" placeholder="Enter details" tabindex=1 />
+
+
+                    <span>Transpoter</span>
+                    <select class="form-select form-select-sm" name="transpoter" id="transpoter"
+                        aria-label=".form-select-sm example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+
+                    </select>
+                    <br>
+
+
+                    <span>Quantity</span>
+                    <select class="form-select " name="quantity" id="quantity" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One Ton</option>
+                        <option value="2">Two Tons</option>
+                        <option value="3">Three Tons</option>
+                    </select>
+
+                    <input type="submit" name="submit" value="PUSH" class="submit" tabindex=5>
+                </form>
+            </div>
+    </section>
+
+    <script src="js/manufacturer_page.js"></script>
+
+    <script>
+        function randomStr(len, arr) {
+            var ans = '';
+            for (var i = len; i > 0; i--) {
+                ans +=
+                    arr[(Math.floor(Math.random() * arr.length))];
+            }
+            return ans;
+        }
+        function autopopulate() {
+            document.getElementById("order_id").value = randomStr(5, '12XEA');
+        }
+    </script>
+
+</body>
+
+</html>
